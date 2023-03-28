@@ -1,5 +1,9 @@
 #include <AlarmClock.h>
+
 #include <QString>
+
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 class ProblemGenerator;
 
@@ -43,16 +47,26 @@ void AlarmClock::updateLabels()
             plusMinusOne->setText(minus);  plusMinusTwo->setText(minus);
         }
 }
+
+void AlarmClock::playAudio()
+{
+    QMediaPlayer* alarmPlayer = new QMediaPlayer;
+
+    //QAudioOutput defaults to the OS's default audio output, which is fine for most purposes in this projects' scope
+    QAudioOutput*  audioOutput = new QAudioOutput;
+    alarmPlayer->setAudioOutput(audioOutput);
+
+    // TODO: Don't hardcode location here. Find a location where it'd be in a release build
+    alarmPlayer->setSource(QUrl::fromLocalFile("/Users/GD/Documents/AlarmClock/Audio/Assets/AlarmSound.mp3"));
+    alarmPlayer->setLoops(QMediaPlayer::Loops::Infinite);
+
+    alarmPlayer->play();
+}
+
 #if 0
 
     // if (CheckButtonPressed), then answerLine.read() == answer ? try again : return
     }
-}
-
-
-void AlarmApp::AlarmClock::instantiateAudio()
-{
-    // Goal of function is to find an audio output from OS, then stream alarm sound to it
 }
 #endif
 

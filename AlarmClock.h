@@ -5,8 +5,6 @@
 #include <ProblemGenerator.h>
 #include <QLabel>
 #include <ui_mainwindow.h>
-#include <QMediaPlayer>
-#include <assert.h>
 
 
 class AlarmClock : public Ui::MainWindow
@@ -16,6 +14,7 @@ public:
        : m_probGenerator{}
        , correctCounter{0}
 {
+        playAudio();
 }
     void updateLabels();
 
@@ -23,13 +22,13 @@ public:
     QString genNumStringTwo;
     QString genNumStringThree;
 
+    friend class ProblemGenerator;
     // Composition determined to be best, as an Alarm Clock HAS A Problem Generator
     ProblemGenerator m_probGenerator;
 
-    friend class ProblemGenerator;
 private:
 
-    void instantiateAudio();
+    void playAudio();
     int correctCounter;
 
     static constexpr QChar plus = '+';
