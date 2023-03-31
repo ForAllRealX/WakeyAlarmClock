@@ -566,6 +566,12 @@
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
+    <property name="cursorMoveStyle">
+     <enum>Qt::LogicalMoveStyle</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="yourAnswerBanner">
     <property name="geometry">
