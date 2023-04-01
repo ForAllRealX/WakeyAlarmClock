@@ -19,8 +19,8 @@ class ProblemGenerator
 public:
     ProblemGenerator()
         : EProblemVariation{notSet}
-        , m_generatedNumbers{}
         , m_answer{0}
+        , m_generatedNumbers{} // zero's all array elements
     {
     }
 
@@ -38,12 +38,17 @@ public:
         pmm  // plus minus minus
     } EProblemVariation;
 
-    int m_generatedNumbers[3];
+
 
 private:
     int m_answer;
+    int m_generatedNumbers[3];
 
-    static constexpr int MAX_ANSWER = 90; // Keep as a multiple of three so it divides evenly. Tweak value for complexity/higher possible outputs
+    static constexpr int MAX_ANSWER = 90; // Keep as a multiple of three so it divides evenly. Tweak value for difficulty/higher possible outputs
     static constexpr int MAX_NUM_PER_VAR = MAX_ANSWER / 3;
+
+    QString genNumStringOne;
+    QString genNumStringTwo;
+    QString genNumStringThree;
 };
 #endif // PROBLEMGENERATOR_H

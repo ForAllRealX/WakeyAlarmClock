@@ -22,6 +22,10 @@ public:
         playAudio();
     }
 
+    friend class ProblemGenerator;
+    // Composition determined to be best, as an Alarm Clock HAS A Problem Generator
+    ProblemGenerator m_probGenerator;
+
     ~AlarmClock()
     {
         delete alarmPlayer;
@@ -29,14 +33,6 @@ public:
     }
 
     void updateLabels();
-
-    QString genNumStringOne;
-    QString genNumStringTwo;
-    QString genNumStringThree;
-
-    friend class ProblemGenerator;
-    // Composition determined to be best, as an Alarm Clock HAS A Problem Generator
-    ProblemGenerator m_probGenerator;
 
 private:
 

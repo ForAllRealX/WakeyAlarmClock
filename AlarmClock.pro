@@ -12,7 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     AlarmClock.cpp \
-    Audio/Code/AudioImpl.cpp \
+    Audio/src/AudioImpl.cpp \
     ProblemGenerator.cpp \
     main.cpp \
     mainwindow.cpp

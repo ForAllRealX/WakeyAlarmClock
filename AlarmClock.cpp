@@ -8,39 +8,35 @@ void AlarmClock::updateLabels()
 {
     assert(m_probGenerator.EProblemVariation != ProblemGenerator::EProblemVariations::notSet);
 
-    genNumStringOne = QString::number(m_probGenerator.m_generatedNumbers[0]);
-    genNumStringTwo = QString::number(m_probGenerator.m_generatedNumbers[1]);
-    genNumStringThree = QString::number(m_probGenerator.m_generatedNumbers[2]);
-
     if (m_probGenerator.EProblemVariation == ProblemGenerator::ppp)
         {
-            dynNumberOne->setText(genNumStringOne);
-            dynNumberTwo->setText(genNumStringTwo);
-            dynNumberThree->setText(genNumStringThree);
+            dynNumberOne->setText(m_probGenerator.genNumStringOne);
+            dynNumberTwo->setText(m_probGenerator.genNumStringTwo);
+            dynNumberThree->setText(m_probGenerator.genNumStringThree);
             plusMinusOne->setText(plus);  plusMinusTwo->setText(plus);
         }
 
     else if (m_probGenerator.EProblemVariation == ProblemGenerator::ppm)
         {
-            dynNumberOne->setText(genNumStringOne);
-            dynNumberTwo->setText(genNumStringTwo);
-            dynNumberThree->setText(genNumStringThree);
+            dynNumberOne->setText(m_probGenerator.genNumStringOne);
+            dynNumberTwo->setText(m_probGenerator.genNumStringTwo);
+            dynNumberThree->setText(m_probGenerator.genNumStringThree);
             plusMinusOne->setText(plus);  plusMinusTwo->setText(minus);
         }
 
     else if (m_probGenerator.EProblemVariation == ProblemGenerator::pmp)
         {
-            dynNumberOne->setText(genNumStringOne);
-            dynNumberTwo->setText(genNumStringTwo);
-            dynNumberThree->setText(genNumStringThree);
+            dynNumberOne->setText(m_probGenerator.genNumStringOne);
+            dynNumberTwo->setText(m_probGenerator.genNumStringTwo);
+            dynNumberThree->setText(m_probGenerator.genNumStringThree);
             plusMinusOne->setText(minus);  plusMinusTwo->setText(plus);
         }
 
     else if (m_probGenerator.EProblemVariation == ProblemGenerator::pmm)
         {
-            dynNumberOne->setText(genNumStringOne);
-            dynNumberTwo->setText(genNumStringTwo);
-            dynNumberThree->setText(genNumStringThree);
+            dynNumberOne->setText(m_probGenerator.genNumStringOne);
+            dynNumberTwo->setText(m_probGenerator.genNumStringTwo);
+            dynNumberThree->setText(m_probGenerator.genNumStringThree);
             plusMinusOne->setText(minus);  plusMinusTwo->setText(minus);
         }
 }
