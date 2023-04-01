@@ -1,3 +1,4 @@
+![WakeyAlarmClock](https://user-images.githubusercontent.com/50895383/229259759-dcce94f4-ba04-448f-8953-921e7ad862e3.png)
 # WakeyAlarmClock
 Have trouble staying up after your alarm wakes you? Then look no further than here! You're guaranteed to stay awake as you must complete several challenging math problems in order to turn it off. By the time you're done, you're bound to be up and moving.
 
@@ -9,14 +10,14 @@ This will always be an amusing little app to run, and it is fascinating seeing t
 The main features I have determined to want in this alarm clock is as follows:
 * Generate random math problems that are mixtures of addition and subtraction of 3 numbers.
   - More specifically, the final answer must be between a reasonable range of about 1 ≤ Answer ≤ 60 (Arbitrary requirement. Subject to change.)
-  - Come up with a way to do it that is not ugly, unlike the current implementation of it.
+  - Come up with a way to generate problems that are not ugly, unlike the current implementation of it.
 * The alarm keeps playing until the user successfully answers 5 questions.
 * Handle user input of the answer with reasonably good input handling.
 * It is a personal goal of mine to not use unperformant ways to do things. I understand an app this small and insignificant would never need optimization and top speed, but 
 
 ## Learning Goals, Takeaways, and Outcomes: 
-* Basic QT Framework know-how
-* Using Git and Github, basic commands on Git Bash
-* Debugging fundamentals and practice
+* Basic QT Framework know-how: e.g. Signals and Slots Pattern, intermixing code with the .ui file(s), etc.
+* Getting familiar with Git and Github: Understanding common commands on Git Bash, Branching, learning minute differences such as when to use Revert versus Reset, and the like.
+* Debugging fundamentals and practice.
 
 # To Be Continued
