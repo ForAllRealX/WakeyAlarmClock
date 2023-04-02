@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;debug;/include;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Public;.;debug;/include;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;$(SolutionDir);C:\Users\GD\Documents\AlarmClock\src\Modules;C:\Users\GD\Documents\AlarmClock\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -161,7 +161,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(QTDIR)\lib\Qt6EntryPointd.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Private;C:\Users\GD\Documents\AlarmClock\src;$(SolutionDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/DEBUG "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -195,6 +195,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AlarmClock\Private\AlarmClock.cpp" />
+    <ClCompile Include="src\Modules\AnswerHandling\Private\AnswerHandlingUtils.cpp" />
     <ClCompile Include="src\Modules\Audio\src\AudioImpl.cpp" />
     <ClCompile Include="src\Modules\ProblemGenerator\Private\ProblemGenerator.cpp" />
     <ClCompile Include="main.cpp" />
@@ -202,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\AlarmClock\Public\AlarmClock.h" />
+    <ClInclude Include="src\Modules\AnswerHandling\Public\AnswerHandlingUtils.h" />
     <ClInclude Include="src\Modules\ProblemGenerator\Public\ProblemGenerator.h" />
     <QtMoc Include="mainwindow.h">
     </QtMoc>

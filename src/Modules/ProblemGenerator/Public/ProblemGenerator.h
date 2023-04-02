@@ -2,17 +2,12 @@
 #define PROBLEMGENERATOR_H
 
 #include <mainwindow.h>
-#include <ui_mainwindow.h>
 #include <QRandomGenerator>
 #include <QString>
 
-// TODO: Hook up signals and slots to the dynamic QLabels
+// Idea: take the answer of DynNumberOne, plug output into the range of the other two
+// variables, guaranteeing it wont be negative as they're smaller?
 
-// Answer must be >= 1
-
-// Idea: take the answer of DynNumberOne, plug output into the range
-// of the other two variables, guaranteeing it wont be negative as
-// they're smaller?
 class ProblemGenerator
 {
 
@@ -37,8 +32,6 @@ public:
         pmp, // plus minus plus
         pmm  // plus minus minus
     } EProblemVariation;
-
-
 
 private:
     int m_answer;

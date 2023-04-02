@@ -1,4 +1,4 @@
-#include "AlarmClock/Public/AlarmClock.h"
+#include <AlarmClock.h>
 
 void AlarmClock::playAudio()
 {
