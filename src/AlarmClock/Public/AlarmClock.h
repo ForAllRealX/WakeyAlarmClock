@@ -4,11 +4,12 @@
 #include <mainwindow.h>
 #include <ui_mainwindow.h>
 
-#include <ProblemGenerator.h>
 #include <QLabel>
-
 #include <QMediaPlayer>
 #include <QAudioOutput>
+
+#include <AnswerHandlingUtils.h>
+#include <ProblemGenerator.h>
 
 class AlarmClock : public Ui::MainWindow
 {
@@ -23,7 +24,6 @@ public:
     }
 
     friend class ProblemGenerator;
-    // Composition determined to be best, as an Alarm Clock HAS A Problem Generator
     ProblemGenerator m_probGenerator;
 
     ~AlarmClock()
@@ -35,7 +35,6 @@ public:
     void updateLabels();
 
 private:
-
     QMediaPlayer* alarmPlayer;
     QAudioOutput* audioOutput;
     void playAudio();

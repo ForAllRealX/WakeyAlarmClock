@@ -1,15 +1,17 @@
 #include <ProblemGenerator.h>
 // TODO: Hook up signals and slots for CheckButton being pressed, and compare answer to actual answer
 
-// TODO: Find more elegant way to assign numbers and signs to the labels.
-// Use if statements since switch requires compile time const expressions. Can't do that with runtime RNG :(
-
 void ProblemGenerator::resetVariables()
 {
     for (int iii = 0; iii < 3; iii++)
         m_generatedNumbers[iii] = 0;
 
     m_answer = 0; 
+}
+
+int ProblemGenerator::getAnswer() const
+{
+    return m_answer;
 }
 
 void ProblemGenerator::generateProblem()
@@ -37,7 +39,7 @@ void ProblemGenerator::generateProblem()
             else if (EProblemVariation == pmm)
                 m_answer = m_generatedNumbers[0] - m_generatedNumbers[1] - m_generatedNumbers[2];
 
-        } while (m_answer < 1);
+        } while (m_answer < MIN_ANSWER);
     }
         genNumStringOne = QString::number(m_generatedNumbers[0]);
         genNumStringTwo = QString::number(m_generatedNumbers[1]);

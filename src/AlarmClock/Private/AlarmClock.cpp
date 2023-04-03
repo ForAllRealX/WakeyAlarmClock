@@ -40,12 +40,3 @@ void AlarmClock::updateLabels()
             plusMinusOne->setText(minus);  plusMinusTwo->setText(minus);
         }
 }
-
-#if 0
-void checkInput()
-{
-    // if (CheckButtonPressed), then answerLine.read() == answer ? try again : return
-    }
-}
-#endif
-
