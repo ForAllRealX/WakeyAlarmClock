@@ -181,6 +181,7 @@ public:
         font2.setFamilies({QString::fromUtf8("Segoe UI Historic")});
         font2.setPointSize(20);
         answerLine->setFont(font2);
+        answerLine->setMaxLength(256);
         answerLine->setAlignment(Qt::AlignCenter);
         answerLine->setCursorMoveStyle(Qt::LogicalMoveStyle);
         answerLine->setClearButtonEnabled(false);
@@ -271,11 +272,11 @@ public:
         progressBar = new QProgressBar(centralwidget);
         progressBar->setObjectName("progressBar");
         progressBar->setEnabled(true);
-        progressBar->setGeometry(QRect(450, 485, 121, 21));
+        progressBar->setGeometry(QRect(440, 495, 131, 21));
         progressBar->setAutoFillBackground(false);
         progressBar->setMinimum(0);
         progressBar->setMaximum(5);
-        progressBar->setValue(4);
+        progressBar->setValue(3);
         progressBar->setAlignment(Qt::AlignCenter);
         progressBar->setTextVisible(true);
         progressBar->setOrientation(Qt::Horizontal);
@@ -283,7 +284,7 @@ public:
         progressBar->setTextDirection(QProgressBar::TopToBottom);
         checkAnswerButton = new QPushButton(centralwidget);
         checkAnswerButton->setObjectName("checkAnswerButton");
-        checkAnswerButton->setGeometry(QRect(550, 440, 51, 21));
+        checkAnswerButton->setGeometry(QRect(550, 440, 61, 21));
         checkAnswerButton->setFont(font);
 #if QT_CONFIG(tooltip)
         checkAnswerButton->setToolTip(QString::fromUtf8(""));
@@ -308,7 +309,7 @@ public:
 #endif // QT_CONFIG(tooltip)
         actionf->setText(QCoreApplication::translate("MainWindow", "f", nullptr));
         solveQuestionBanner->setText(QCoreApplication::translate("MainWindow", "Solve All Questions To Turn Off Alarm:", nullptr));
-        answerLine->setText(QCoreApplication::translate("MainWindow", "28", nullptr));
+        answerLine->setText(QString());
         yourAnswerBanner->setText(QCoreApplication::translate("MainWindow", "Your Answer:", nullptr));
         plusMinusOne->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         plusMinusTwo->setText(QCoreApplication::translate("MainWindow", "-", nullptr));

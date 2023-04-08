@@ -8,37 +8,45 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 
-#include <AnswerHandlingUtils.h>
+#include "src/Modules/AnswerHandling/Public/AnswerHandlingUtils.h"
 #include <ProblemGenerator.h>
 
-class AlarmClock : public Ui::MainWindow
+class AlarmClock : public QObject, public Ui::MainWindow
 {
+    Q_OBJECT
+
 public:
     AlarmClock()
         : m_probGenerator{}
-        , alarmPlayer{new QMediaPlayer}
-        , audioOutput{new QAudioOutput} //QAudioOutput defaults to the OS's default audio output, which is fine for most purposes in this projects' scope
-        , correctCounter{0}
+        , m_alarmPlayer{new QMediaPlayer}
+        , m_audioOutput{new QAudioOutput} //QAudioOutput defaults to the OS's default audio output, which is fine for most purposes in this projects' scope
+        , m_correctCounter{0}
     {
         playAudio();
     }
 
+    friend AnswerHandlingUtils::isCorrect_t AnswerHandlingUtils::checkAnswer(QLineEdit* lineEd, int answer);
     friend class ProblemGenerator;
+    
     ProblemGenerator m_probGenerator;
 
     ~AlarmClock()
     {
-        delete alarmPlayer;
-        delete audioOutput;
+        delete m_alarmPlayer;
+        delete m_audioOutput;
     }
 
     void updateLabels();
+    int getCorrectCounter() const;
+    
+public slots:
+    void on_checkAnswerButton_clicked();
 
 private:
-    QMediaPlayer* alarmPlayer;
-    QAudioOutput* audioOutput;
+    QMediaPlayer* m_alarmPlayer;
+    QAudioOutput* m_audioOutput;
     void playAudio();
-    int correctCounter;
+    int m_correctCounter;
 
     static constexpr QChar plus = '+';
     static constexpr QChar minus = '-';

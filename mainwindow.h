@@ -14,8 +14,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-// private
-    Ui::MainWindow *ui;
+
+    Ui::MainWindow* ui;    
 
 public slots:
     void on_checkAnswerButton_clicked();

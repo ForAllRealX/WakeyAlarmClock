@@ -1,7 +1,6 @@
 #ifndef PROBLEMGENERATOR_H
 #define PROBLEMGENERATOR_H
 
-#include <mainwindow.h>
 #include <QRandomGenerator>
 #include <QString>
 

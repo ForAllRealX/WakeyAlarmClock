@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Public;.;debug;/include;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;$(SolutionDir);C:\Users\GD\Documents\AlarmClock\src\Modules;C:\Users\GD\Documents\AlarmClock\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;debug;/include;$(SolutionDir);C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Private;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\Modules;C:\Users\GD\Documents\AlarmClock\src;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -202,7 +202,7 @@
     <ClCompile Include="mainwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AlarmClock\Public\AlarmClock.h" />
+    <QtMoc Include="src\AlarmClock\Public\AlarmClock.h" />
     <ClInclude Include="src\Modules\AnswerHandling\Public\AnswerHandlingUtils.h" />
     <ClInclude Include="src\Modules\ProblemGenerator\Public\ProblemGenerator.h" />
     <QtMoc Include="mainwindow.h">
@@ -229,6 +229,9 @@
   <ItemGroup>
     <QtUic Include="src\Forms\mainwindow.ui">
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
