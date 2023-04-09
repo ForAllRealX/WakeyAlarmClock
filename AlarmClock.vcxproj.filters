@@ -52,7 +52,7 @@
     <ClCompile Include="mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Modules\AnswerHandling\Private\AnswerHandlingUtils.cpp">
+    <ClCompile Include="src\Modules\AlarmUtils\Private\AlarmUtils.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,7 +63,7 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClInclude Include="src\Modules\AnswerHandling\Public\AnswerHandlingUtils.h">
+    <ClInclude Include="src\Modules\AlarmUtils\Public\AlarmUtils.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

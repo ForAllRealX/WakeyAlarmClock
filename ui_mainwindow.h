@@ -159,6 +159,7 @@ public:
         font.setPointSize(12);
         MainWindow->setFont(font);
         MainWindow->setAutoFillBackground(false);
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         MainWindow->setTabShape(QTabWidget::Rounded);
         actionf = new QAction(MainWindow);
         actionf->setObjectName("actionf");
@@ -166,10 +167,10 @@ public:
         centralwidget->setObjectName("centralwidget");
         solveQuestionBanner = new QLabel(centralwidget);
         solveQuestionBanner->setObjectName("solveQuestionBanner");
-        solveQuestionBanner->setGeometry(QRect(220, 50, 581, 41));
+        solveQuestionBanner->setGeometry(QRect(190, 30, 641, 41));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Segoe UI Light")});
-        font1.setPointSize(28);
+        font1.setPointSize(30);
         font1.setItalic(false);
         solveQuestionBanner->setFont(font1);
         solveQuestionBanner->setLayoutDirection(Qt::LeftToRight);
@@ -207,13 +208,15 @@ public:
         plusMinusTwo->setAlignment(Qt::AlignCenter);
         decorativeLine = new QFrame(centralwidget);
         decorativeLine->setObjectName("decorativeLine");
-        decorativeLine->setGeometry(QRect(280, 90, 481, 20));
+        decorativeLine->setGeometry(QRect(270, 70, 501, 20));
         QFont font5;
         font5.setFamilies({QString::fromUtf8("Segoe UI Historic")});
         font5.setPointSize(18);
         decorativeLine->setFont(font5);
-        decorativeLine->setFrameShape(QFrame::HLine);
         decorativeLine->setFrameShadow(QFrame::Sunken);
+        decorativeLine->setLineWidth(1);
+        decorativeLine->setMidLineWidth(0);
+        decorativeLine->setFrameShape(QFrame::HLine);
         dynNumberOne = new QLabel(centralwidget);
         dynNumberOne->setObjectName("dynNumberOne");
         dynNumberOne->setGeometry(QRect(380, 280, 71, 41));
@@ -226,23 +229,23 @@ public:
         dynNumberOne->setAlignment(Qt::AlignCenter);
         dynNumberTwo = new QLabel(centralwidget);
         dynNumberTwo->setObjectName("dynNumberTwo");
-        dynNumberTwo->setGeometry(QRect(490, 280, 71, 41));
+        dynNumberTwo->setGeometry(QRect(490, 280, 81, 41));
         dynNumberTwo->setFont(font6);
         dynNumberTwo->setAlignment(Qt::AlignCenter);
         dynNumberThree = new QLabel(centralwidget);
         dynNumberThree->setObjectName("dynNumberThree");
-        dynNumberThree->setGeometry(QRect(590, 280, 71, 41));
+        dynNumberThree->setGeometry(QRect(590, 280, 81, 41));
         dynNumberThree->setFont(font6);
         dynNumberThree->setAlignment(Qt::AlignCenter);
         decorativeLine_2 = new QFrame(centralwidget);
         decorativeLine_2->setObjectName("decorativeLine_2");
-        decorativeLine_2->setGeometry(QRect(430, 404, 161, 20));
+        decorativeLine_2->setGeometry(QRect(440, 404, 141, 20));
         decorativeLine_2->setFont(font5);
         decorativeLine_2->setFrameShape(QFrame::HLine);
         decorativeLine_2->setFrameShadow(QFrame::Sunken);
         currentTime = new QTimeEdit(centralwidget);
         currentTime->setObjectName("currentTime");
-        currentTime->setGeometry(QRect(390, 130, 251, 71));
+        currentTime->setGeometry(QRect(390, 110, 251, 61));
         QFont font7;
         font7.setFamilies({QString::fromUtf8("Segoe UI Semilight")});
         font7.setPointSize(36);
@@ -273,10 +276,36 @@ public:
         progressBar->setObjectName("progressBar");
         progressBar->setEnabled(true);
         progressBar->setGeometry(QRect(440, 495, 131, 21));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush);
+        QBrush brush20(QColor(81, 61, 116, 255));
+        brush20.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Highlight, brush20);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Highlight, brush13);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Highlight, brush19);
+        progressBar->setPalette(palette1);
         progressBar->setAutoFillBackground(false);
+        progressBar->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
+"     border: 1px solid grey;\n"
+"     border-radius: 5px;\n"
+"     background-color: #FFFFFF;\n"
+" }\n"
+"\n"
+" QProgressBar::chunk {\n"
+"     background-color: #157451;\n"
+"     width: 20px;\n"
+" }"));
         progressBar->setMinimum(0);
-        progressBar->setMaximum(5);
-        progressBar->setValue(3);
+        progressBar->setMaximum(3);
+        progressBar->setValue(0);
         progressBar->setAlignment(Qt::AlignCenter);
         progressBar->setTextVisible(true);
         progressBar->setOrientation(Qt::Horizontal);
@@ -313,10 +342,10 @@ public:
         yourAnswerBanner->setText(QCoreApplication::translate("MainWindow", "Your Answer:", nullptr));
         plusMinusOne->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
         plusMinusTwo->setText(QCoreApplication::translate("MainWindow", "-", nullptr));
-        dynNumberOne->setText(QCoreApplication::translate("MainWindow", "17", nullptr));
-        dynNumberTwo->setText(QCoreApplication::translate("MainWindow", "28", nullptr));
-        dynNumberThree->setText(QCoreApplication::translate("MainWindow", "3", nullptr));
-        progressBar->setFormat(QCoreApplication::translate("MainWindow", "%v/5", nullptr));
+        dynNumberOne->setText(QCoreApplication::translate("MainWindow", "ERR", nullptr));
+        dynNumberTwo->setText(QCoreApplication::translate("MainWindow", "ERR", nullptr));
+        dynNumberThree->setText(QCoreApplication::translate("MainWindow", "ERR", nullptr));
+        progressBar->setFormat(QCoreApplication::translate("MainWindow", "%v/3", nullptr));
         checkAnswerButton->setText(QCoreApplication::translate("MainWindow", "Check", nullptr));
     } // retranslateUi
 

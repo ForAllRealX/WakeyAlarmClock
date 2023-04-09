@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;debug;/include;$(SolutionDir);C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Private;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\Modules;C:\Users\GD\Documents\AlarmClock\src;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\AnswerHandling\Private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;debug;/include;$(SolutionDir);C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Public;C:\Users\GD\Documents\AlarmClock\src\Modules\ProblemGenerator\Private;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Public;C:\Users\GD\Documents\AlarmClock\src\AlarmClock\Private;C:\Users\GD\Documents\AlarmClock\src\Modules;C:\Users\GD\Documents\AlarmClock\src;C:\Users\GD\Documents\AlarmClock\src\Modules\AlarmUtils;C:\Users\GD\Documents\AlarmClock\src\ModulesAlarmUtils\Public;C:\Users\GD\Documents\AlarmClock\src\ModulesAlarmUtils\Private;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -195,7 +195,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AlarmClock\Private\AlarmClock.cpp" />
-    <ClCompile Include="src\Modules\AnswerHandling\Private\AnswerHandlingUtils.cpp" />
+    <ClCompile Include="src\Modules\AlarmUtils\Private\AlarmUtils.cpp" />
     <ClCompile Include="src\Modules\Audio\src\AudioImpl.cpp" />
     <ClCompile Include="src\Modules\ProblemGenerator\Private\ProblemGenerator.cpp" />
     <ClCompile Include="main.cpp" />
@@ -203,7 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\AlarmClock\Public\AlarmClock.h" />
-    <ClInclude Include="src\Modules\AnswerHandling\Public\AnswerHandlingUtils.h" />
+    <ClInclude Include="src\Modules\AlarmUtils\Public\AlarmUtils.h" />
     <ClInclude Include="src\Modules\ProblemGenerator\Public\ProblemGenerator.h" />
     <QtMoc Include="mainwindow.h">
     </QtMoc>

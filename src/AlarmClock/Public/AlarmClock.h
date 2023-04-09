@@ -8,7 +8,7 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 
-#include "src/Modules/AnswerHandling/Public/AnswerHandlingUtils.h"
+#include "AlarmUtils/Public/AlarmUtils.h"
 #include <ProblemGenerator.h>
 
 class AlarmClock : public QObject, public Ui::MainWindow
@@ -25,19 +25,19 @@ public:
         playAudio();
     }
 
-    friend AnswerHandlingUtils::isCorrect_t AnswerHandlingUtils::checkAnswer(QLineEdit* lineEd, int answer);
-    friend class ProblemGenerator;
-    
-    ProblemGenerator m_probGenerator;
-
     ~AlarmClock()
     {
         delete m_alarmPlayer;
         delete m_audioOutput;
     }
 
+    friend AlarmUtils::isCorrect_t AlarmUtils::checkAnswer(QLineEdit* lineEd, int answer);
+    friend class ProblemGenerator;
+    
+    ProblemGenerator m_probGenerator;
+    static constexpr int NUM_PROBLEMS{ 3 };
+    
     void updateLabels();
-    int getCorrectCounter() const;
     
 public slots:
     void on_checkAnswerButton_clicked();

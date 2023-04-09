@@ -35,7 +35,7 @@ public:
     } EProblemVariation;
 
     static constexpr int MIN_ANSWER = 1;
-    static constexpr int MAX_ANSWER = 90; // Keep as a multiple of three so it divides evenly. Tweak value for difficulty/higher possible outputs
+    static constexpr int MAX_ANSWER = 36; // Keep as a multiple of three so it divides evenly. Tweak value for difficulty/higher possible outputs
     static constexpr int MAX_NUM_PER_VAR = MAX_ANSWER / 3;
 
 private:

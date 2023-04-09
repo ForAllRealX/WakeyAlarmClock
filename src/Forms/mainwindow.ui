@@ -515,6 +515,9 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <property name="tabShape">
    <enum>QTabWidget::Rounded</enum>
   </property>
@@ -522,16 +525,16 @@
    <widget class="QLabel" name="solveQuestionBanner">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>50</y>
-      <width>581</width>
+      <x>190</x>
+      <y>30</y>
+      <width>641</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI Light</family>
-      <pointsize>28</pointsize>
+      <pointsize>30</pointsize>
       <italic>false</italic>
      </font>
     </property>
@@ -642,9 +645,9 @@
    <widget class="Line" name="decorativeLine">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>90</y>
-      <width>481</width>
+      <x>270</x>
+      <y>70</y>
+      <width>501</width>
       <height>20</height>
      </rect>
     </property>
@@ -653,6 +656,15 @@
       <family>Segoe UI Historic</family>
       <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -680,7 +692,7 @@
      <enum>QFrame::Plain</enum>
     </property>
     <property name="text">
-     <string>17</string>
+     <string>ERR</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -691,7 +703,7 @@
      <rect>
       <x>490</x>
       <y>280</y>
-      <width>71</width>
+      <width>81</width>
       <height>41</height>
      </rect>
     </property>
@@ -702,7 +714,7 @@
      </font>
     </property>
     <property name="text">
-     <string>28</string>
+     <string>ERR</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -713,7 +725,7 @@
      <rect>
       <x>590</x>
       <y>280</y>
-      <width>71</width>
+      <width>81</width>
       <height>41</height>
      </rect>
     </property>
@@ -724,7 +736,7 @@
      </font>
     </property>
     <property name="text">
-     <string>3</string>
+     <string>ERR</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -733,9 +745,9 @@
    <widget class="Line" name="decorativeLine_2">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>440</x>
       <y>404</y>
-      <width>161</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
@@ -753,9 +765,9 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>130</y>
+      <y>110</y>
       <width>251</width>
-      <height>71</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -837,17 +849,147 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.023, x2:0.983, y2:1, st
       <height>21</height>
      </rect>
     </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>81</red>
+          <green>61</green>
+          <blue>116</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>240</red>
+          <green>240</green>
+          <blue>240</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Highlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>120</green>
+          <blue>215</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar {
+     border: 1px solid grey;
+     border-radius: 5px;
+     background-color: #FFFFFF;
+ }
+
+ QProgressBar::chunk {
+     background-color: #157451;
+     width: 20px;
+ }</string>
     </property>
     <property name="minimum">
      <number>0</number>
     </property>
     <property name="maximum">
-     <number>5</number>
+     <number>3</number>
     </property>
     <property name="value">
-     <number>3</number>
+     <number>0</number>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -865,7 +1007,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.023, x2:0.983, y2:1, st
      <enum>QProgressBar::TopToBottom</enum>
     </property>
     <property name="format">
-     <string>%v/5</string>
+     <string>%v/3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="checkAnswerButton">
